@@ -21,6 +21,7 @@ zlib \
 libarchive \
 libsodium \
 libseccomp \
+librapidcheck \
 nlohmann-json \
 openssl \
 perl \
