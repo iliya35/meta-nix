@@ -8,14 +8,17 @@ Subject: [PATCH] No documentation
  1 file changed, 1 deletion(-)
 
 diff --git a/Makefile b/Makefile
-index e6ce50cbd..88b0d274d 100644
+index 4f4ac0c6e..62316b45a 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -19,7 +19,6 @@ makefiles = \
+@@ -19,9 +19,7 @@ makefiles = \
+   misc/zsh/local.mk \
    misc/systemd/local.mk \
    misc/launchd/local.mk \
-   misc/upstart/local.mk \
+-  misc/upstart/local.mk \
 -  doc/manual/local.mk \
-   tests/local.mk \
-   tests/plugins/local.mk
+-  doc/internal-api/local.mk
++  misc/upstart/local.mk
+ endif
  
+ ifeq ($(ENABLE_BUILD)_$(ENABLE_TESTS), yes_yes)

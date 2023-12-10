@@ -8,10 +8,10 @@ Subject: [PATCH] Don't split nix into shared libs
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/mk/lib.mk b/mk/lib.mk
-index 92f0983d5..7cb15b365 100644
+index 49abe9862..114ec7cde 100644
 --- a/mk/lib.mk
 +++ b/mk/lib.mk
-@@ -64,7 +64,7 @@ endif
+@@ -65,7 +65,7 @@ endif
  
  
  # Pass -fPIC if we're building dynamic libraries.

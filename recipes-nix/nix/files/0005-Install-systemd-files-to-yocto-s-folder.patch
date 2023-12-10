@@ -8,14 +8,16 @@ Subject: [PATCH] Install systemd files to yocto's folder
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/misc/systemd/local.mk b/misc/systemd/local.mk
-index 1fa037485..86da46bde 100644
+index 76121a0f9..5fa5adf0c 100644
 --- a/misc/systemd/local.mk
 +++ b/misc/systemd/local.mk
-@@ -1,6 +1,6 @@
+@@ -1,7 +1,7 @@
  ifdef HOST_LINUX
  
 -  $(foreach n, nix-daemon.socket nix-daemon.service, $(eval $(call install-file-in, $(d)/$(n), $(prefix)/lib/systemd/system, 0644)))
+-  $(foreach n, nix-daemon.conf, $(eval $(call install-file-in, $(d)/$(n), $(prefix)/lib/tmpfiles.d, 0644)))
 +  $(foreach n, nix-daemon.socket nix-daemon.service, $(eval $(call install-file-in, $(d)/$(n), $(systemd_system_unitdir), 0644)))
++  $(foreach n, nix-daemon.conf, $(eval $(call install-file-in, $(d)/$(n), $(sysconfdir)/tmpfiles.d, 0644)))
  
-   clean-files += $(d)/nix-daemon.socket $(d)/nix-daemon.service
+   clean-files += $(d)/nix-daemon.socket $(d)/nix-daemon.service $(d)/nix-daemon.conf
  

@@ -20,7 +20,7 @@ jq-native \
 zlib \
 libarchive \
 libsodium \
-nlohmann-json \
+libseccomp \
 openssl \
 perl \
 pkgconfig \
@@ -38,7 +38,7 @@ inherit autotools-brokensep pkgconfig useradd systemd
 # between 8.0.6 and master
 CONFIGUREOPTS:append = " --disable-cpuid --disable-gc "
 
-FILES:${PN}-zsh = " ${datadir_native}/zsh/site-functions/_nix "
+FILES:${PN}-zsh = " ${datadir_native}/zsh/site-functions/ "
 FILES:${PN}-bash = " ${datadir_native}/bash-completion/completions/nix "
 FILES:${PN}-fish = " ${datadir_native}/fish/vendor_completions.d/nix.fish "
 FILES:${PN} += " ${systemd_system_unitdir}/nix-daemon.service ${systemd_system_unitdir}/nix-daemon.socket "

@@ -1,17 +1,16 @@
 require nix.inc
 
-SRC_URI = "git://github.com/NixOS/nix.git;branch=master;protcol=http \
+PV = "2.19.2"
+
+SRC_URI = "git://github.com/NixOS/nix.git;nobranch=1;name=nix;protocol=https \
            file://0001-No-documentation.patch \
-           file://0002-Force-cast.patch \
-           file://0003-Yocto-bundles-library-into-one-file.patch \
-           file://0004-no-allocators-if-don-t-HAVE_BOEHMGC.patch \
            file://0005-Install-systemd-files-to-yocto-s-folder.patch \
            file://0006-Don-t-split-nix-into-shared-libs.patch \
            "
 
-SRCREV="d5d4d980427aca3849b90bfe1694b6d1d14532fb"
+SRCREV="50f8f1c8bc019a4c0fd098b9ac674b94cfc6af0d"
 
-SRC_URI[sha256sum] = "809d9270716a8e8727a0bffafc08dc81a3bc87cc3aed9ad07ddbecef8d4bb83e"
+SRC_URI[sha256sum] = "c20d36994f686ada8e649a9dc51a32010066eea8a8bd74045985bc9110842773"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=fbc093901857fcd118f065f900982c24 "
 
