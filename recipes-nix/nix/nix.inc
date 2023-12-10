@@ -21,6 +21,7 @@ zlib \
 libarchive \
 libsodium \
 libseccomp \
+nlohmann-json \
 openssl \
 perl \
 pkgconfig \
